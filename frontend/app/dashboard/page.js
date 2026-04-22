@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './dashboard.module.css';
 
-const API = 'http://localhost:5000';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 
 const STAGES = ['manager', 'researcher', 'content_creator', 'critic', 'scheduler'];
 const STAGE_LABELS = {
