@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHON — AI Digital Agency Dashboard</title>
+    <meta name="description" content="ARCHON AI-powered multi-agent content creation and Telegram posting dashboard">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+
+    <!-- Floating Mini Robot Characters -->
+    <div class="robots-container">
+        <!-- Robot 1: Runner -->
+        <div class="mini-robot robot-runner" id="robot1">
+            <div class="robot-body">
+                <div class="robot-head">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                    <div class="robot-antenna"></div>
+                </div>
+                <div class="robot-torso"></div>
+                <div class="robot-leg left"></div>
+                <div class="robot-leg right"></div>
+            </div>
+            <div class="robot-shadow"></div>
+            <div class="robot-label">Researcher</div>
+        </div>
+
+        <!-- Robot 2: Jumper -->
+        <div class="mini-robot robot-jumper" id="robot2">
+            <div class="robot-body">
+                <div class="robot-head type-2">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                    <div class="robot-visor"></div>
+                </div>
+                <div class="robot-torso type-2"></div>
+                <div class="robot-arm left"></div>
+                <div class="robot-arm right"></div>
+            </div>
+            <div class="robot-shadow"></div>
+            <div class="robot-label">Creator</div>
+        </div>
+
+        <!-- Robot 3: Waver -->
+        <div class="mini-robot robot-waver" id="robot3">
+            <div class="robot-body">
+                <div class="robot-head type-3">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                    <div class="robot-mouth"></div>
+                </div>
+                <div class="robot-torso type-3"></div>
+                <div class="robot-arm left wave"></div>
+                <div class="robot-arm right"></div>
+            </div>
+            <div class="robot-shadow"></div>
+            <div class="robot-label">Critic</div>
+        </div>
+
+        <!-- Robot 4: Dancer -->
+        <div class="mini-robot robot-dancer" id="robot4">
+            <div class="robot-body">
+                <div class="robot-head type-4">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                    <div class="robot-antenna"></div>
+                    <div class="robot-antenna right"></div>
+                </div>
+                <div class="robot-torso type-4"></div>
+                <div class="robot-leg left kick"></div>
+                <div class="robot-leg right"></div>
+            </div>
+            <div class="robot-shadow"></div>
+            <div class="robot-label">Scheduler</div>
+        </div>
+
+        <!-- Robot 5: Floating -->
+        <div class="mini-robot robot-floater" id="robot5">
+            <div class="robot-body">
+                <div class="robot-head type-5">
+                    <div class="robot-eye left big"></div>
+                    <div class="robot-eye right big"></div>
+                </div>
+                <div class="robot-torso type-5"></div>
+                <div class="robot-jetpack"></div>
+            </div>
+            <div class="robot-shadow small"></div>
+            <div class="robot-label">Manager</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="14" stroke="url(#grad1)" stroke-width="2" />
+                        <circle cx="16" cy="16" r="6" fill="url(#grad1)" />
+                        <circle cx="16" cy="8" r="2" fill="#22d3ee" />
+                        <circle cx="22" cy="20" r="2" fill="#14b8a6" />
+                        <circle cx="10" cy="20" r="2" fill="#06b6d4" />
+                        <line x1="16" y1="10" x2="16" y2="14" stroke="#22d3ee" stroke-width="1.5" />
+                        <line x1="20.5" y1="19" x2="18" y2="17" stroke="#14b8a6" stroke-width="1.5" />
+                        <line x1="11.5" y1="19" x2="14" y2="17" stroke="#06b6d4" stroke-width="1.5" />
+                        <defs>
+                            <linearGradient id="grad1" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#22d3ee" />
+                                <stop offset="100%" stop-color="#14b8a6" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">ARCHON</span>
+                <span class="logo-badge">Dashboard</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span>System Online</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Task Section — Full Width, Big & Prominent -->
+        <section class="task-hero">
+            <div class="task-hero-inner">
+                <div class="task-hero-header">
+                    <h1 class="task-hero-title">What should your AI agents create today?</h1>
+                    <p class="task-hero-subtitle">Enter a task below and let 5 specialized agents collaborate to produce
+                        publish-ready content.</p>
+                </div>
+                <div class="task-input-wrapper">
+                    <textarea id="taskInput"
+                        placeholder="Example: Create 3 engaging Telegram posts about our AI startup that helps small businesses automate repetitive tasks. Target audience: founders and solopreneurs aged 25-40..."
+                        rows="5"></textarea>
+                    <div class="task-input-footer">
+                        <span class="task-hint">Press Ctrl+Enter to generate</span>
+                        <button id="generateBtn" class="btn btn-primary btn-large" onclick="startGeneration()">
+                            <span class="btn-text">Generate Content</span>
+                            <span class="btn-loader" style="display:none"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Grid — Pipeline + Messages + History -->
+        <div class="bottom-grid">
+            <!-- Pipeline Card -->
+            <div class="card pipeline-card" id="pipelineCard" style="display:none">
+                <h2 class="card-title">
+                    <span class="title-accent">Agent Pipeline</span>
+                    <span class="run-id" id="runIdBadge"></span>
+                </h2>
+                <div class="pipeline">
+                    <div class="pipeline-stage" id="stage-manager">
+                        <div class="stage-icon">M</div>
+                        <div class="stage-info">
+                            <div class="stage-name">Manager</div>
+                            <div class="stage-desc">Analyzing task and extracting brief</div>
+                        </div>
+                        <div class="stage-status">
+                            <div class="stage-dot"></div>
+                        </div>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-stage" id="stage-researcher">
+                        <div class="stage-icon">R</div>
+                        <div class="stage-info">
+                            <div class="stage-name">Researcher</div>
+                            <div class="stage-desc">Searching web for insights</div>
+                        </div>
+                        <div class="stage-status">
+                            <div class="stage-dot"></div>
+                        </div>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-stage" id="stage-content_creator">
+                        <div class="stage-icon">W</div>
+                        <div class="stage-info">
+                            <div class="stage-name">Content Creator</div>
+                            <div class="stage-desc">Writing platform-optimized messages</div>
+                        </div>
+                        <div class="stage-status">
+                            <div class="stage-dot"></div>
+                        </div>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-stage" id="stage-critic">
+                        <div class="stage-icon">C</div>
+                        <div class="stage-info">
+                            <div class="stage-name">Critic</div>
+                            <div class="stage-desc">Reviewing quality and scoring</div>
+                        </div>
+                        <div class="stage-status">
+                            <div class="stage-dot"></div>
+                        </div>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-stage" id="stage-scheduler">
+                        <div class="stage-icon">S</div>
+                        <div class="stage-info">
+                            <div class="stage-name">Scheduler</div>
+                            <div class="stage-desc">Picking optimal posting times</div>
+                        </div>
+                        <div class="stage-status">
+                            <div class="stage-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Activity Feed -->
+                <div class="activity-feed-wrapper" id="activityFeedWrapper">
+                    <div class="activity-feed-header">
+                        <span class="activity-feed-title">Live Agent Activity</span>
+                        <span class="activity-feed-live" id="activityLiveIndicator">
+                            <span class="live-dot"></span> LIVE
+                        </span>
+                    </div>
+                    <div class="activity-feed" id="activityFeed">
+                        <div class="activity-empty">Waiting for pipeline to start...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generated Messages -->
+            <div class="card messages-card" id="messagesCard" style="display:none">
+                <h2 class="card-title">
+                    <span class="title-accent">Generated Messages</span>
+                    <span class="message-count" id="messageCount"></span>
+                </h2>
+                <div id="messagesContainer" class="messages-container"></div>
+                <div class="approval-bar" id="approvalBar" style="display:none">
+                    <button class="btn btn-approve" onclick="approveMessages()">
+                        <span>Approve and Post</span>
+                    </button>
+                    <button class="btn btn-regenerate" onclick="regenerateMessages()">
+                        <span>Regenerate</span>
+                    </button>
+                    <button class="btn btn-reject" onclick="rejectMessages()">
+                        <span>Reject</span>
+                    </button>
+                </div>
+                <div class="post-result" id="postResult" style="display:none"></div>
+            </div>
+
+            <!-- Post History -->
+            <div class="card history-card">
+                <h2 class="card-title">
+                    <span class="title-accent">Post History</span>
+                </h2>
+                <div id="historyContainer" class="history-container">
+                    <div class="history-empty">No posts yet. Generate your first content above.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span>ARCHON AI Agency</span>
+        <span class="footer-sep">/</span>
+        <span>Multi-Agent Content Pipeline</span>
+        <span class="footer-sep">/</span>
+        <span>Powered by LangGraph + Groq</span>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

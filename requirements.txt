@@ -1,0 +1,11 @@
+Flask
+flask-cors
+requests
+python-dotenv
+gunicorn
+langgraph
+langchain-groq
+langchain-community
+googlesearch-python
+APScheduler
+python-telegram-bot

@@ -1,0 +1,42 @@
+# ─── Environment & Secrets ───
+.env
+.env.local
+.env.production
+*.pem
+
+# ─── Python ───
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.Python
+
+# ─── Node / Next.js ───
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+.next/
+
+# ─── OS Files ───
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ─── IDE ───
+.vscode/
+.idea/
+*.code-workspace
+
+# ─── Logs ───
+*.log
+npm-debug.log*
+
+# ─── Misc ───
+.gemini/
+.claude/

@@ -1,0 +1,5 @@
+# Override GitHub Linguist language detection
+# Mark CSS and frontend assets as vendored so they don't inflate language stats
+static/css/* linguist-vendored
+frontend/*.css linguist-vendored
+frontend/**/*.css linguist-vendored

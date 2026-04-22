@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHON — AI-Powered Digital Agency</title>
+    <meta name="description"
+        content="ARCHON is an autonomous AI agency powered by multi-agent intelligence. Generate, review, and publish content across Telegram, Instagram, LinkedIn, YouTube and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/landing.css">
+</head>
+
+<body>
+    <!-- Animated Background Layers -->
+    <div class="bg-noise"></div>
+    <div class="bg-scanlines"></div>
+    <div class="bg-grid-overlay"></div>
+    <div class="neon-orb orb-1"></div>
+    <div class="neon-orb orb-2"></div>
+    <div class="neon-orb orb-3"></div>
+    <div class="neon-orb orb-4"></div>
+
+    <!-- Floating Particles Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <div class="logo-ring"></div>
+                    <div class="logo-core"></div>
+                </div>
+                <span class="nav-logo-text">ARCHON</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#agents" class="nav-link">Agents</a>
+                <a href="#platforms" class="nav-link">Platforms</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="/dashboard" class="nav-cta">Launch Dashboard →</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span>MULTI-AGENT AI SYSTEM</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-line-1">Your Autonomous</span>
+                <span class="hero-line-2">
+                    <span class="gradient-text">AI Digital Agency</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">
+                Six AI agents that research, create, review, schedule, and publish
+                content — autonomously. One task in, polished content out.
+                No prompting loops. No copy-pasting. Just results.
+            </p>
+            <div class="hero-actions">
+                <a href="/dashboard" class="btn-hero">
+                    <span class="btn-hero-glow"></span>
+                    <span class="btn-hero-text">Get Started</span>
+                    <span class="btn-hero-arrow">→</span>
+                </a>
+                <a href="#how-it-works" class="btn-hero-secondary">
+                    <span>See How It Works</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">AI Agents</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">5+</span>
+                    <span class="stat-label">Platforms</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">∞</span>
+                    <span class="stat-label">Content Ideas</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="agent-orbit">
+                <div class="orbit-ring ring-1"></div>
+                <div class="orbit-ring ring-2"></div>
+                <div class="orbit-ring ring-3"></div>
+                <div class="orbit-center">
+                    <span>U</span>
+                </div>
+                <div class="orbit-node node-1" data-label="Manager">🎯</div>
+                <div class="orbit-node node-2" data-label="Researcher">🔍</div>
+                <div class="orbit-node node-3" data-label="Creator">✍️</div>
+                <div class="orbit-node node-4" data-label="Critic">🧐</div>
+                <div class="orbit-node node-5" data-label="Scheduler">📅</div>
+                <div class="orbit-node node-6" data-label="Poster">📬</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section class="section" id="about">
+        <div class="section-inner">
+            <div class="section-badge">WHAT IS ARCHON</div>
+            <h2 class="section-title">Not Just Another AI Tool.<br><span class="gradient-text">An Entire Agency.</span>
+            </h2>
+            <p class="section-desc">
+                ARCHON is a multi-agent AI system built with LangGraph. Unlike ChatGPT or other LLMs where you prompt,
+                copy, and paste — ARCHON's agents work together autonomously. They research your industry,
+                craft platform-optimized content, quality-check it, schedule optimal posting times,
+                and publish directly to your channels. You just approve.
+            </p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">🧠</div>
+                    <h3>Multi-Agent Intelligence</h3>
+                    <p>6 specialized AI agents collaborate through a state machine — each one an expert in their domain.
+                        Not one model doing everything; a team doing it right.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">🔄</div>
+                    <h3>Self-Correcting</h3>
+                    <p>The Critic agent reviews all content and autonomously rejects anything below quality standards.
+                        Content gets rewritten until it's perfect — no human needed.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">⚡</div>
+                    <h3>End-to-End Execution</h3>
+                    <p>From task to published post in under 30 seconds. Researches your market, writes content, reviews
+                        quality, schedules timing, and publishes — all automatically.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">🛡️</div>
+                    <h3>Human-in-the-Loop</h3>
+                    <p>Nothing goes live without your approval. Review every message, approve what you love, reject or
+                        regenerate what you don't. You stay in control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ AGENTS ═══════════ -->
+    <section class="section section-dark" id="agents">
+        <div class="section-inner">
+            <div class="section-badge">THE TEAM</div>
+            <h2 class="section-title">Meet Your <span class="gradient-text">AI Agents</span></h2>
+            <p class="section-desc">Each agent is a specialist — trained for one job, executed with precision.</p>
+            <div class="agents-grid">
+                <div class="agent-card" style="--agent-color: #818cf8; --agent-delay: 0s">
+                    <div class="agent-card-number">01</div>
+                    <div class="agent-card-emoji">🎯</div>
+                    <h3>Manager Agent</h3>
+                    <p>Analyzes your task, extracts company info, identifies target audience, and creates a detailed
+                        content brief for the team.</p>
+                    <div class="agent-card-tag">Task Orchestration</div>
+                </div>
+                <div class="agent-card" style="--agent-color: #22d3ee; --agent-delay: 0.1s">
+                    <div class="agent-card-number">02</div>
+                    <div class="agent-card-emoji">🔍</div>
+                    <h3>Researcher Agent</h3>
+                    <p>Searches the web in real-time for industry trends, engagement strategies, and content ideas
+                        specific to your brand.</p>
+                    <div class="agent-card-tag">Web Intelligence</div>
+                </div>
+                <div class="agent-card" style="--agent-color: #a78bfa; --agent-delay: 0.2s">
+                    <div class="agent-card-number">03</div>
+                    <div class="agent-card-emoji">✍️</div>
+                    <h3>Content Creator</h3>
+                    <p>Writes platform-optimized content using research insights. Markdown formatting, emojis, hooks,
+                        CTAs — crafted to perfection.</p>
+                    <div class="agent-card-tag">Creative Writing</div>
+                </div>
+                <div class="agent-card" style="--agent-color: #f472b6; --agent-delay: 0.3s">
+                    <div class="agent-card-number">04</div>
+                    <div class="agent-card-emoji">🧐</div>
+                    <h3>Critic Agent</h3>
+                    <p>10-year social media strategist in AI form. Scores content on 6 criteria. Rejects anything below
+                        7.5/10 automatically.</p>
+                    <div class="agent-card-tag">Quality Assurance</div>
+                </div>
+                <div class="agent-card" style="--agent-color: #fbbf24; --agent-delay: 0.4s">
+                    <div class="agent-card-number">05</div>
+                    <div class="agent-card-emoji">📅</div>
+                    <h3>Scheduler Agent</h3>
+                    <p>Picks optimal posting times based on platform engagement patterns. Spreads content across days
+                        for maximum reach.</p>
+                    <div class="agent-card-tag">Timing Optimization</div>
+                </div>
+                <div class="agent-card" style="--agent-color: #34d399; --agent-delay: 0.5s">
+                    <div class="agent-card-number">06</div>
+                    <div class="agent-card-emoji">📬</div>
+                    <h3>Poster Agent</h3>
+                    <p>Connects to platform APIs and publishes approved content. Handles formatting, rate limits, and
+                        error recovery.</p>
+                    <div class="agent-card-tag">API Integration</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ PLATFORMS ═══════════ -->
+    <section class="section" id="platforms">
+        <div class="section-inner">
+            <div class="section-badge">MULTI-PLATFORM</div>
+            <h2 class="section-title">One Agency.<br><span class="gradient-text">Every Platform.</span></h2>
+            <p class="section-desc">
+                ARCHON generates platform-optimized content. Each platform has different rules,
+                character limits, and engagement patterns — ARCHON knows them all.
+            </p>
+            <div class="platforms-grid">
+                <div class="platform-card platform-active">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M24 4C12.96 4 4 12.96 4 24s8.96 20 20 20 20-8.96 20-20S35.04 4 24 4zm9.2 14.52L27.56 33.6c-.36.84-1.32.84-1.8.12l-3.96-5.16-5.52 3.12c-.6.36-1.2-.12-1.08-.84l1.56-7.32-5.64-3.96c-.6-.48-.24-1.32.48-1.32l6.72-.12 2.76-6.96c.24-.72 1.32-.72 1.56 0l2.76 6.96 6.72.12c.72 0 1.08.84.48 1.32l-5.64 3.96 1.56 7.32"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>Telegram</h3>
+                    <p>Channels & Groups</p>
+                    <div class="platform-status live">● Live Now</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M24 4C12.96 4 4 12.96 4 24s8.96 20 20 20 20-8.96 20-20S35.04 4 24 4zm0 6c3.32 0 3.72.012 5.04.072 1.2.056 1.88.252 2.32.42.56.216.96.48 1.38.9.42.42.68.82.9 1.38.168.44.364 1.12.42 2.32.06 1.32.072 1.72.072 5.04s-.012 3.72-.072 5.04c-.056 1.2-.252 1.88-.42 2.32-.216.56-.48.96-.9 1.38-.42.42-.82.684-1.38.9-.44.168-1.12.364-2.32.42-1.32.06-1.72.072-5.04.072s-3.72-.012-5.04-.072c-1.2-.056-1.88-.252-2.32-.42-.56-.216-.96-.48-1.38-.9-.42-.42-.684-.82-.9-1.38-.168-.44-.364-1.12-.42-2.32C14.012 27.72 14 27.32 14 24s.012-3.72.072-5.04c.056-1.2.252-1.88.42-2.32.216-.56.48-.96.9-1.38.42-.42.82-.684 1.38-.9.44-.168 1.12-.364 2.32-.42C20.28 10.012 20.68 10 24 10zm0 2.52c-3.268 0-3.636.012-4.92.072-1.18.052-1.82.248-2.248.412-.564.22-.968.48-1.392.904-.424.424-.684.828-.904 1.392-.164.428-.36 1.068-.412 2.248-.06 1.284-.072 1.652-.072 4.92s.012 3.636.072 4.92c.052 1.18.248 1.82.412 2.248.22.564.48.968.904 1.392.424.424.828.684 1.392.904.428.164 1.068.36 2.248.412 1.284.06 1.652.072 4.92.072s3.636-.012 4.92-.072c1.18-.052 1.82-.248 2.248-.412.564-.22.968-.48 1.392-.904.424-.424.684-.828.904-1.392.164-.428.36-1.068.412-2.248.06-1.284.072-1.652.072-4.92s-.012-3.636-.072-4.92c-.052-1.18-.248-1.82-.412-2.248-.22-.564-.48-.968-.904-1.392-.424-.424-.828-.684-1.392-.904-.428-.164-1.068-.36-2.248-.412-1.284-.06-1.652-.072-4.92-.072zM24 17.16a6.84 6.84 0 100 13.68 6.84 6.84 0 000-13.68zm0 11.28a4.44 4.44 0 110-8.88 4.44 4.44 0 010 8.88zm8.712-11.556a1.596 1.596 0 11-3.192 0 1.596 1.596 0 013.192 0z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Posts & Reels</p>
+                    <div class="platform-status soon">Coming Soon</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M40 8H8c-2.2 0-4 1.8-4 4v24c0 2.2 1.8 4 4 4h32c2.2 0 4-1.8 4-4V12c0-2.2-1.8-4-4-4zM16 34h-4V20h4v14zm-2-16c-1.32 0-2.4-1.08-2.4-2.4S12.68 13.2 14 13.2s2.4 1.08 2.4 2.4S15.32 18 14 18zm22 16h-4v-7c0-1.66-.04-3.8-2.32-3.8-2.32 0-2.68 1.82-2.68 3.68V34h-4V20h3.84v1.92h.04c.54-1.02 1.84-2.08 3.8-2.08 4.06 0 4.82 2.68 4.82 6.16v8z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Professional Posts</p>
+                    <div class="platform-status soon">Coming Soon</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M43.2 12.08c-.36.16-5.32 2.28-5.32 2.28.04.52.08 1.04.08 1.64 0 8.48-6.44 18.24-18.24 18.24-3.6 0-6.96-1.06-9.8-2.88.5.06 1.02.08 1.52.08 3 0 5.76-1.02 7.96-2.74-2.8-.04-5.16-1.9-5.98-4.44.4.08.8.12 1.22.12.58 0 1.14-.08 1.68-.22-2.92-.6-5.12-3.16-5.12-6.26v-.06c.86.48 1.84.76 2.88.8-1.72-1.14-2.84-3.1-2.84-5.32 0-1.18.32-2.28.86-3.22 3.14 3.86 7.84 6.4 13.14 6.66-.1-.46-.16-.96-.16-1.46 0-3.52 2.86-6.38 6.38-6.38 1.84 0 3.5.78 4.66 2.02 1.46-.28 2.82-.82 4.06-1.56-.48 1.5-1.5 2.76-2.82 3.56 1.3-.16 2.54-.5 3.68-.98-.86 1.28-1.94 2.42-3.2 3.32l.36.58z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>X / Twitter</h3>
+                    <p>Tweets & Threads</p>
+                    <div class="platform-status soon">Coming Soon</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M42 12.24c0-1.76-.76-3.36-1.96-4.48H7.96C6.76 8.88 6 10.48 6 12.24v16.56l12.72-8.04L24 24.12l5.28-3.36L42 28.8V12.24zm-36 20.4V34.2c0 1.76.76 3.36 1.96 4.48h32.08c1.2-1.12 1.96-2.72 1.96-4.48v-1.56L29.28 24.6 24 27.96l-5.28-3.36L6 32.64z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>YouTube</h3>
+                    <p>Community Posts</p>
+                    <div class="platform-status soon">Coming Soon</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="3" fill="none" /><text
+                                x="24" y="30" text-anchor="middle" fill="currentColor" font-size="18"
+                                font-weight="bold">+</text>
+                        </svg>
+                    </div>
+                    <h3>More</h3>
+                    <p>Expanding Always</p>
+                    <div class="platform-status soon">Roadmap</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ HOW IT WORKS ═══════════ -->
+    <section class="section section-dark" id="how-it-works">
+        <div class="section-inner">
+            <div class="section-badge">WORKFLOW</div>
+            <h2 class="section-title">How <span class="gradient-text">ARCHON</span> Works</h2>
+            <div class="workflow-timeline">
+                <div class="workflow-step">
+                    <div class="workflow-number">1</div>
+                    <div class="workflow-content">
+                        <h3>You Describe the Task</h3>
+                        <p>"Create 3 posts for my AI startup targeting small business owners in India"</p>
+                    </div>
+                </div>
+                <div class="workflow-connector"></div>
+                <div class="workflow-step">
+                    <div class="workflow-number">2</div>
+                    <div class="workflow-content">
+                        <h3>Agents Take Over</h3>
+                        <p>Manager analyzes → Researcher searches the web → Content Creator writes → Critic reviews
+                            (rejects if score &lt; 7.5) → Scheduler picks times</p>
+                    </div>
+                </div>
+                <div class="workflow-connector"></div>
+                <div class="workflow-step">
+                    <div class="workflow-number">3</div>
+                    <div class="workflow-content">
+                        <h3>You Review & Approve</h3>
+                        <p>Preview every message on the dashboard. Approve, reject, or regenerate with one click.</p>
+                    </div>
+                </div>
+                <div class="workflow-connector"></div>
+                <div class="workflow-step">
+                    <div class="workflow-number">4</div>
+                    <div class="workflow-content">
+                        <h3>Published Instantly</h3>
+                        <p>Approved content goes live on your Telegram channel. Check your phone — it's already there.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ TECH STACK ═══════════ -->
+    <section class="section" id="tech">
+        <div class="section-inner">
+            <div class="section-badge">BUILT WITH</div>
+            <h2 class="section-title">The <span class="gradient-text">Tech Stack</span></h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <span class="tech-name">LangGraph</span>
+                    <span class="tech-role">Agent Orchestration</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">Groq</span>
+                    <span class="tech-role">LLM Inference (Llama 3.3)</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">Flask</span>
+                    <span class="tech-role">Backend & API</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">Telegram Bot API</span>
+                    <span class="tech-role">Publishing</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">DuckDuckGo</span>
+                    <span class="tech-role">Web Search</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">APScheduler</span>
+                    <span class="tech-role">Task Scheduling</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CTA ═══════════ -->
+    <section class="section section-cta" id="cta">
+        <div class="section-inner">
+            <h2 class="cta-title">Ready to Deploy Your<br><span class="gradient-text">AI Content Agency?</span></h2>
+            <p class="cta-desc">One task. Six agents. Published to your channel in seconds.</p>
+            <a href="/dashboard" class="btn-hero btn-hero-large">
+                <span class="btn-hero-glow"></span>
+                <span class="btn-hero-text">Launch Dashboard</span>
+                <span class="btn-hero-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="section section-dark" id="contact">
+        <div class="section-inner">
+            <div class="section-badge">GET IN TOUCH</div>
+            <h2 class="section-title">Contact & <span class="gradient-text">Connect</span></h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>archon.agency@proton.me</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Telegram</h3>
+                    <p>@archon_agency</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🐙</div>
+                    <h3>GitHub</h3>
+                    <p>github.com/swagatobauri</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">ARCHON</span>
+                <span class="footer-tagline">Autonomous AI Digital Agency</span>
+            </div>
+            <div class="footer-text">
+                <p>Built with LangGraph, Groq, and ambition.</p>
+                <p class="footer-copy">© 2026 ARCHON. Engineered by Swagato Bauri.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ─── Navbar scroll effect ───
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ─── Smooth scroll ───
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // ─── Scroll reveal animations ───
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.about-card, .agent-card, .platform-card, .workflow-step, .tech-item, .contact-card').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+
+        // ─── Particle Canvas ───
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createParticles() {
+            particles = [];
+            const count = Math.floor(window.innerWidth / 20);
+            for (let i = 0; i < count; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    size: Math.random() * 1.5 + 0.5,
+                    alpha: Math.random() * 0.3 + 0.1,
+                });
+            }
+        }
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0) p.x = canvas.width;
+                if (p.x > canvas.width) p.x = 0;
+                if (p.y < 0) p.y = canvas.height;
+                if (p.y > canvas.height) p.y = 0;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(129, 140, 248, ${p.alpha})`;
+                ctx.fill();
+            });
+            requestAnimationFrame(drawParticles);
+        }
+
+        resizeCanvas();
+        createParticles();
+        drawParticles();
+        window.addEventListener('resize', () => { resizeCanvas(); createParticles(); });
+
+        // ─── Typing effect for hero subtitle ───
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        heroSubtitle.style.opacity = '0';
+        setTimeout(() => {
+            heroSubtitle.style.transition = 'opacity 1s ease';
+            heroSubtitle.style.opacity = '1';
+        }, 800);
+    </script>
+</body>
+
+</html>
