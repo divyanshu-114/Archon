@@ -434,7 +434,7 @@ export default function LandingPage() {
             {[
               { label: 'Email', value: 'archon.agency@proton.me' },
               { label: 'Telegram', value: '@archon_agency' },
-              { label: 'GitHub', value: 'github.com/swagatobauri' },
+              { label: 'GitHub', value: 'github.com/divyanshu-114' },
             ].map((c, i) => (
               <div key={i} className={styles.contactCard}>
                 <h3>{c.label}</h3>
@@ -450,7 +450,7 @@ export default function LandingPage() {
         <div className={styles.footerInner}>
           <span className={styles.footerBrand}>ARCHON</span>
           <span className={styles.footerTag}>Autonomous AI Digital Agency</span>
-          <p className={styles.footerCopy}>Built with LangGraph, Groq, and ambition. Engineered by Swagato Bauri.</p>
+          <p className={styles.footerCopy}>Built with LangGraph, Groq, and ambition. Engineered by Divyanshu Raj.</p>
         </div>
       </footer>
     </>
